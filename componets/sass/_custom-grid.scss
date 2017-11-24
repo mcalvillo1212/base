@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  max-width: 768px;
+}
+.container .row {
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+.row {
+  margin-bottom: 7px;
+}
+.row .col {
+  padding: 0px 0.25rem;
+}
