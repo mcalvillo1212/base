@@ -1,3 +1,7 @@
+var $ = require ('jquery');
+var swiper = require ('swiper');
+var materialize = require ('materialize-css');
+
 $(document).ready(function () {
   //initialize swiper when document ready
   var swiper = new Swiper('.swiper-container', {
