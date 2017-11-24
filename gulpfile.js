@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 var jsSources = [
-  'componets/scripts/script.js'
+  'components/scripts/script.js'
 ];
 
 gulp.task('log', function() {
@@ -11,5 +11,5 @@ gulp.task('log', function() {
 });
 
 gulp.task('js', function() {
-  
+
 });
