@@ -4,7 +4,7 @@
   "description": "Base website setup.",
   "repository": {
     "type": "git",
-    "url": "?.git"
+    "url": "https://github.com/mcalvillo1212/base.git"
   },
   "author": "mcalvillo",
   "license": "MIT",
