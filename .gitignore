@@ -1,5 +1,11 @@
 .DS_Store
-node_modules
 .tmp
+.log
+.err
+.zip
+.cache
+Thumbs.db
 .sass-cache
+npm-debug.log*
+node_modules
 builds/**/images/*
