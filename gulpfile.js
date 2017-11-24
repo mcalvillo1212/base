@@ -5,11 +5,9 @@ var gulp = require('gulp'),
 var jsSources = [
   'components/scripts/script.js'
 ];
-
-gulp.task('log', function() {
-  gutil.log('Its working!!!');
-});
-
+// combine all js files form jsSouses array
 gulp.task('js', function() {
-
+  gulp.src(jsSources)
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('builds/dev/js'))
 });
