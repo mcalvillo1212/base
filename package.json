@@ -15,6 +15,7 @@
     "gulp-util": "^3.0.8",
     "jquery": "^3.2.1",
     "materialize-css": "^0.100.2",
-    "swiper": "^4.0.6"
+    "swiper": "^4.0.6",
+    "uglify-js": "^3.1.10"
   }
 }
