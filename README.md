@@ -1,3 +1,3 @@
 # Base website setup
 
-Basic website template setup.
+Basic website template setup
