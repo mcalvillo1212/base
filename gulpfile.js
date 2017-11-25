@@ -6,8 +6,6 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     gulpif = require('gulp-if'),
-    imagemin = require('gulp-imagemin'),
-    pngcrush = require('imagemin-pngcrush'),
     // browserify = require('gulp-browserify'),
     concat = require('gulp-concat');
 
@@ -21,9 +19,4 @@ gulp.task('js', function() {
     .pipe(concat('script.js'))
     // .pipe(browserify())
     .pipe(gulp.dest('builds/dev/js'))
-});
-
-// combine all js files form jsSources array
-gulp.task('images', function() {
-  gulp.src('builds/dev/images/**/*.*')
 });
