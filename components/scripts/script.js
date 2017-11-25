@@ -1,8 +1,4 @@
-// var $ = require ('jquery');
-// var swiper = require ('swiper');
-// var materialize = require ('materialize-css');
-
-$(document).ready(function () {
+// $(document).ready(function () {
   //initialize swiper when document ready
   var swiper = new Swiper('.swiper-container', {
     // Optional parameters
@@ -20,6 +16,6 @@ $(document).ready(function () {
     } // navigation
   }); // swiper
 
-  $('.modal').modal();
+  // $('.modal').modal();
 
-});
+// });
