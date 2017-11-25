@@ -1,6 +1,6 @@
 // $(document).ready(function () {
   //initialize swiper when document ready
-  var swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper-container', {
     // Optional parameters
     pagination: {
       el: '.swiper-pagination',

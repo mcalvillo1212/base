@@ -8,15 +8,43 @@
   },
   "author": "mcalvillo",
   "license": "MIT",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
   "scripts": {
-    "dev:sass-dev": "node-sass components/sass/ --output-style expanded --source-map true components/sass/style.scss --output builds/dev/css",
-    "dev:live-server": "live-server builds/dev"
+    "start": "npm-run-all --parallel dev:*",
+    "dev:sass": "node-sass --watch components/sass/ --output-style expanded --source-map true components/sass/style.scss --output builds/dev/css",
+    "dev:js-compile": "babel components/scripts/**/*.js --watch --out-file builds/dev/js/script.js --source-maps",
+    "dev:server": "live-server builds/dev",
+    "build": "npm-run-all  prod:*",
+    "prod:setup": "mkdirp builds/prod/js",
+    "prod:sass-prod": "node-sass components/sass/ --output-style compressed components/sass/style.scss --output builds/prod/css",
+    "prod:js-uglify": "uglifyjs builds/dev/js/script.js --compress --mangle --output builds/prod/js/script.js",
+    "prod:html-minify": "html-minifier --collapse-whitespace --remove-comments builds/dev/index.html > builds/prod/index.html",
+    "prod:img-min": "imagemin builds/dev/images/sizes/* -o builds/prod/images"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.0.0",
     "gulp-util": "^3.0.8",
+    "html-minifier": "^3.5.6",
+    "imagemin": "^5.3.1",
+    "imagemin-cli": "^3.0.0",
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-pngcrush": "^5.1.0",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-svgo": "^6.0.0",
     "live-server": "^1.2.0",
+    "mkdirp": "^0.5.1",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "uglify-js": "^3.1.10"

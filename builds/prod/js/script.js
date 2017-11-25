@@ -1,0 +1,1 @@
+"use strict";var swiper=new Swiper(".swiper-container",{pagination:{el:".swiper-pagination",clickable:!0,renderBullet:function(e,r){return'<span class="'+r+'">'+(e+1)+"</span>"}},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}}),$=require("jquery"),swiper=require("swiper"),materialize=require("materialize-css");
